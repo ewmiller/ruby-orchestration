@@ -1,5 +1,7 @@
 require 'sinatra'
-require_relative './lib/orchestration_functions.rb'
+require_relative './lib/orchestrator.rb'
+
+orchestrator = Orchestrator.new('./properties.json')
 
 get '/' do
   'Put this in your pipe and orchestrate it!'
@@ -8,5 +10,5 @@ end
 post '/api/v2/orchestration' do
   'Received POST request'
   request_body = request.body.read
-  process_json(request_body)
+  orchestrator.process_request(request_body)
 end

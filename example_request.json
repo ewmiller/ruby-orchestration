@@ -1,0 +1,16 @@
+{
+  "auth": {
+    "token": "someLegitToken"
+  },
+	"services": {
+		"firewall":{
+			"requestedBy": "user1234",
+			"nodeName": "vxipblahblah123",
+      "firewallPort": "8080"
+		},
+		"dns": {
+			"requestedBy": "user1234",
+			"cname": "coolsite.company.com"
+		}
+	}
+}
