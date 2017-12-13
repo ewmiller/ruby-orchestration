@@ -12,7 +12,7 @@ get '/' do
 end
 
 post settings.api_endpoint do
-  'Received POST request'
   request_body = request.body.read
   orchestrator.process_request(request_body)
+  'Received POST request'
 end
