@@ -13,7 +13,6 @@ class Orchestrator
   def send_request(uri, data)
     begin
       res = Net::HTTP.post(uri, data)
-      puts res.body
     rescue
       puts("Error occurred when trying to send request to " + uri.to_s)
     end
