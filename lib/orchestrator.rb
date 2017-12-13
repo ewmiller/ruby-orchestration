@@ -2,7 +2,6 @@ require 'net/http'
 require 'json'
 require 'uri'
 
-
 class Orchestrator
 
   # provide the path for a properties file (required)
@@ -41,5 +40,9 @@ class Orchestrator
       end
     end
   end # end process_request
+
+  def get_api_endpoint 
+    return @properties["api_endpoint"]
+  end
 
 end

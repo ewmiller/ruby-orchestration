@@ -1,0 +1,4 @@
+api_endpoint: "/api/v2/orchestration"
+endpoints: 
+  "firewall": "http://localhost:8080/api/firewall"
+  "dns": "http://localhost:8081/api/dns"
