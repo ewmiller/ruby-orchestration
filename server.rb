@@ -3,7 +3,9 @@ require 'sinatra/config_file'
 require_relative './lib/orchestrator.rb'
 
 config_file './config.yml'
-puts(settings.api_endpoint)
+
+
+orchestrator = Orchestrator.new(settings.service_endpoints)
 
 get '/' do
   'Put this in your pipe and orchestrate it!'
